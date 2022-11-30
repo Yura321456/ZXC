@@ -1,1 +1,15 @@
-Lets start epta
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void main(){
+    srand(time(NULL));
+int i;
+double A[12];
+double C[0];
+
+for(i = 0; i < 12; i++){
+    A[i] = rand() % 100;
+    printf("A = %.0lf\n", A[i]);
+}
+}
