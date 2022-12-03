@@ -4,12 +4,23 @@
 
 void main(){
     srand(time(NULL));
-int i;
-double A[12];
-double C[0];
+int A[12];
+int pair = 0;
+int outC = 1;
+int C[outC];
 
-for(i = 0; i < 12; i++){
+for( int i = 0; i < 12; i++){
     A[i] = rand() % 100;
-    printf("A = %.0lf\n", A[i]);
+    printf("A = %i\n", A[i]);
+}
+for( int j = 0;j < 12 ;j++){
+      if(A[j] % 2==1){
+        pair++;
+        }
+        if(pair >= 2){
+            C[outC - 1] = A[j];
+            outC++;
+     printf(" C = %i",C[outC - 1]);
+}
 }
 }
