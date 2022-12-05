@@ -26,7 +26,7 @@ for( int j = 0;j < 12 ;j++){
 deltSize++;
 }
 for (int i = 1; i < 12 - deltSize; i++) {
-   C[i] = A[deltSize + i];
+   C[i] = A[deltSize + i] / C[0];
    printf("C[%i] = %lf\n",i,C[i]);
 }
 }
