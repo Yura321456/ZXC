@@ -9,22 +9,32 @@ int pair = 0;
 int deltSize = 0;
 double C[12 - deltSize];
 
-for( int i = 0; i < 12; i++){
-    A[i] = rand() % 100;
+
+
+while(pair < 2)
+{
+    deltSize = 0; 
+    for( int i = 0; i < 12; i++){
+    A[i] = 2 + rand() % 100;
     printf("A(%i) = %i\n",i, A[i]);
 }
-for( int j = 0;j < 12 ;j++){
+    
+    for( int j = 0;j < 12 ;j++){
       if(A[j] % 2==1){
-        pair++;
+        pair ++;
         }
         if(pair == 2){
             C[0] = A[j];
      printf(" C(0) = %lf\n",C[0]);
      break;
+        }
+deltSize++;
+
+}
      
 }
-deltSize++;
-}
+    
+
 for (int i = 1; i < 12 - deltSize; i++) {
    C[i] = A[deltSize + i] / C[0];
    printf("C[%i] = %lf\n",i,C[i]);
